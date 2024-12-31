@@ -109,7 +109,7 @@ bindsym F3 exec amixer -q set Master 5%+
 
 # Brightness control
 bindsym F5 exec brightnessctl set 5%-
-bindsym F6 exec brightnessctl set +5%
+bindsym F6 exec brightnessctl set 5%+
 
 # Screenshots
 bindsym F12 exec scrot ~/Pictures/Screenshots/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png
@@ -156,8 +156,10 @@ client.focused_inactive $secondary $secondary $foreground $secondary
 client.unfocused $background_alt $background_alt $foreground $background_alt
 client.urgent $alert $alert $foreground $alert
 
-assign [class="brave-browser"] 2
-assign [class="code"] 3
-assign [class="spotify"] 9
+exec --no-startup-id i3-msg workspace 1
+assign [class="Brave-browser"] 2
+assign [class="Code"] 3
+assign [class="Spotify"] 9
 assign [class="discord"] 9
-assign [class="whatsapp-linux-app"] 9
+assign [class="whatsapp-nativefier-d52542"] 8
+assign [class="whatsapp-linux-app"] 8
