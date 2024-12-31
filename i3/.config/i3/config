@@ -14,6 +14,11 @@ font pango:JetbrainsMono Nerd Font Bold 10
 gaps outer 4
 gaps inner 4
 
+# Remove borders for tiled and float windows
+default_border pixel 0
+default_floating_border pixel 0
+
+
 # Rofi (launcher and powermenu)
 bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+p exec --no-startup-id ~/.config/rofi/powermenu.sh
@@ -144,7 +149,15 @@ set $secondary #4c7899
 set $alert #A54242
 set $border_inactive #222D31
 
+# Window colors
+# class        border    backgr.   text        indicator 
 client.focused $primary $secondary $foreground $primary
 client.focused_inactive $secondary $secondary $foreground $secondary
 client.unfocused $background_alt $background_alt $foreground $background_alt
 client.urgent $alert $alert $foreground $alert
+
+assign [class="brave-browser"] 2
+assign [class="code"] 3
+assign [class="spotify"] 9
+assign [class="discord"] 9
+assign [class="whatsapp-linux-app"] 9
