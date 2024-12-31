@@ -111,6 +111,12 @@ bindsym F3 exec amixer -q set Master 5%+
 bindsym F5 exec brightnessctl set 5%-
 bindsym F6 exec brightnessctl set 5%+
 
+# Music Player
+bindsym F8 exec playerctl previous     # Previous track
+bindsym F9 exec playerctl play-pause   # Play/Pause toggle
+bindsym F10 exec playerctl next         # Next track
+
+
 # Screenshots
 bindsym F12 exec scrot ~/Pictures/Screenshots/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png
 bindsym Shift+F12 exec scrot -u ~/Pictures/Screenshots/screenshot_$(date +%Y-%m-%d_%H-%M-%S).png
