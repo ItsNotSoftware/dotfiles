@@ -3,6 +3,8 @@ set $mod Mod4
 exec --no-startup-id picom
 exec_always feh --bg-scale ~/Pictures/girl-6D1A6.jpg
 
+exec_always --no-startup-id ~/autotiling/autotiling/main.py 
+
 # Polybar
 exec_always --no-startup-id killall polybar
 exec_always --no-startup-id .config/polybar/launch_polybar.sh
@@ -166,6 +168,6 @@ exec --no-startup-id i3-msg workspace 1
 assign [class="Brave-browser"] 2
 assign [class="Code"] 3
 assign [class="Spotify"] 9
-assign [class="discord"] 9
-assign [class="whatsapp-nativefier-d52542"] 8
-assign [class="whatsapp-linux-app"] 8
+assign [class="discord"] 10
+assign [class="whatsapp-linux-app"] 10
+assign [class="Mail"] 10
