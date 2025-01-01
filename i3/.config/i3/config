@@ -1,7 +1,7 @@
 set $mod Mod4
 
 exec --no-startup-id picom
-exec_always feh --bg-scale ~/Pictures/girl-6D1A6.jpg
+exec_always feh --bg-scale ~/.config/i3/wallpapers/wallpaper.png
 
 exec_always --no-startup-id ~/autotiling/autotiling/main.py 
 

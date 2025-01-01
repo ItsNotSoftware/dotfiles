@@ -40,6 +40,9 @@ run_cmd() {
             amixer set Master mute
             systemctl suspend
             ;;
+        --lock)
+            i3lock -i "$HOME/.config/i3/wallpapers/lockscreen.png"
+            ;;
         --logout)
             case "$DESKTOP_SESSION" in
                 openbox)
@@ -72,14 +75,7 @@ case "${chosen}" in
         run_cmd --reboot
         ;;
     "${lock}")
-        if [[ -x "$HOME/.config/i3/lockscreen.sh" ]]; then
-            "$HOME/.config/i3/lockscreen.sh"
-        fi
-        # if [[ -x '/usr/bin/betterlockscreen' ]]; then
-        #     betterlockscreen -l
-        # elif [[ -x '/usr/bin/i3lock' ]]; then
-        #     i3lock
-        # fi
+        run_cmd --lock
         ;;
     "${suspend}")
         run_cmd --suspend
