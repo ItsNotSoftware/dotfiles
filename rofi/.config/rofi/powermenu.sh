@@ -41,7 +41,7 @@ run_cmd() {
             systemctl suspend
             ;;
         --lock)
-            i3lock -i "$HOME/.config/i3/wallpapers/lockscreen.png"
+            i3lock -i "~/.config/i3/wallpapers/lockscreen.png"
             ;;
         --logout)
             case "$DESKTOP_SESSION" in
