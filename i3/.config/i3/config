@@ -1,8 +1,8 @@
 set $mod Mod4
 
-include ~/.config/i3/workspaces.conf
-include ~/.config/i3/keybindings.conf
 include ~/.config/i3/autostart.conf
+include ~/.config/i3/ws.conf
+include ~/.config/i3/keybindings.conf
 include ~/.config/i3/appearance.conf
 include ~/.config/i3/floating_windows.conf
 
