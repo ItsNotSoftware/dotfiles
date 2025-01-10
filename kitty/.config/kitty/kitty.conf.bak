@@ -1,0 +1,40 @@
+# General Appearance
+font_family          JetBrainsMono Nerd Font
+font_size            12.0
+bold_font            auto
+italic_font          auto
+
+# Transparency (requires a compositor like picom)
+background_opacity   0.7
+
+# Tab Bar (minimal look)
+enable_tab_bar       yes
+tab_bar_style        powerline
+
+# Padding
+window_padding_width 4
+
+# Scrollback
+scrollback_lines     10000
+
+# URL Highlighting
+detect_urls          yes
+
+# Keybindings
+map ctrl+shift+c     copy_to_clipboard
+map ctrl+shift+v     paste_from_clipboard
+map ctrl+shift+n     new_window
+map ctrl+shift+w     close_window
+
+# GPU Renderer Settings
+use_gpu              yes
+vsync                no
+
+# i3-specific tweaks for window resizing
+allow_remote_control yes
+
+
+# BEGIN_KITTY_THEME
+# Catppuccin-Macchiato
+include current-theme.conf
+# END_KITTY_THEME
