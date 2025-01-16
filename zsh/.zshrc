@@ -21,6 +21,6 @@ alias usettings="export XDG_CURRENT_DESKTOP=GNOME && gnome-control-center && XDG
 alias mm="xrandr --output eDP-1 --auto --output HDMI-1-0 --auto --left-of eDP-1"
 alias restart_lm="xrandr --output eDP-1 --off && xrandr ''output eDP-1 --auto"
 alias kbl='function _kbl() { echo $1 | sudo tee /sys/class/leds/platform::kbd_backlight/brightness; }; _kbl'
-alias unreal="~/Applications/Linux_Unreal_Engine_5.5.1/Engine/Binaries/Linux/UnrealEditor &"
+alias unreal="~/Applications/Linux_Unreal_Engine_5.5.1/Engine/Binaries/Linux/UnrealEditor"
 
 
