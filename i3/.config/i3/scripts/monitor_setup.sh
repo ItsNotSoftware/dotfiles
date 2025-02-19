@@ -7,8 +7,8 @@ EXTERNAL=$(xrandr | grep "HDMI" | grep " connected" | awk '{ print $1 }')
 # Apply layout
 if [[ -n "$EXTERNAL" && -n "$INTERNAL" ]]; then
   # External and internal monitors connected
-  xrandr --output "$INTERNAL" --primary --auto --pos 0x0 \
-         --output "$EXTERNAL" --auto --left-of "$INTERNAL"
+  xrandr --output "$INTERNAL" --auto --pos 0x0 \
+         --output "$EXTERNAL" --primary --auto --left-of "$INTERNAL"
 elif [[ -n "$EXTERNAL" ]]; then
   # Only external monitor connected
   xrandr --output "$EXTERNAL" --primary --auto \
