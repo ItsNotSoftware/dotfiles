@@ -23,7 +23,7 @@ alias restart_lm="xrandr --output eDP-1 --off && xrandr ''output eDP-1 --auto"
 alias kbl='function _kbl() { echo $1 | sudo tee /sys/class/leds/platform::kbd_backlight/brightness; }; _kbl'
 alias unreal="~/Applications/Linux_Unreal_Engine_5.5.1/Engine/Binaries/Linux/UnrealEditor &"
 alias blender="~/Applications/blender-4.3.2/blender &"
-alias matlab="/usr/local/MATLAB/R2025a/bin/matlab &"
+alias matlab="/usr/local/MATLAB/R2024b/bin/matlab &"
 
 
 
