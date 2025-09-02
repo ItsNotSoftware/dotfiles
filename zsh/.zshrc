@@ -25,5 +25,10 @@ alias unreal="~/Applications/Linux_Unreal_Engine_5.5.1/Engine/Binaries/Linux/Unr
 alias blender="~/Applications/blender-4.3.2/blender &"
 alias matlab="/usr/local/MATLAB/R2024b/bin/matlab &"
 
-
-
+clr_cache() {
+  echo "Flushing disk writes..."
+  sync
+  echo "Dropping caches..."
+  sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
+  echo "Memory cache cleared."
+}
