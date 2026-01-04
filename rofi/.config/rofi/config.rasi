@@ -83,7 +83,7 @@ configuration {
 
 	/*---------- Misc setting ----------*/
 	terminal: "rofi-sensible-terminal";
-	font: "Mono 14";
+	font: "Mono 12";
 	sort: false;
 	threads: 0;
 	click-to-exit: true;
@@ -179,6 +179,3 @@ configuration {
 	me-accept-custom: "Control+MouseDPrimary";
 */
 }
-
-@theme "~/.config/rofi/themes/cat_chainsaw.rasi"
-
