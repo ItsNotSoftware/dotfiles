@@ -1,3 +1,5 @@
+mouse_mode true
+
 ui {
     pane_frames {
         rounded_corners true
@@ -8,6 +10,7 @@ keybinds clear-defaults=true {
         bind "Alt t" { NewTab; }
         bind "Alt q" { CloseTab; }
         bind "Alt w" { CloseFocus; }
+        bind "Alt Tab" { GoToNextTab; }
     }
     locked {
         bind "Ctrl g" { SwitchToMode "normal"; }

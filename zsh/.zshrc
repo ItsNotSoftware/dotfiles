@@ -1,3 +1,5 @@
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -32,3 +34,6 @@ clr_cache() {
   sudo sh -c 'echo 3 > /proc/sys/vm/drop_caches'
   echo "Memory cache cleared."
 }
+
+autoload -Uz add-zsh-hook
+
