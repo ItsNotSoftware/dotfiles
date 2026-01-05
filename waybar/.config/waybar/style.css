@@ -1,4 +1,4 @@
-@import 'colors/onde-dark.css';
+@import 'colors/one-dark.css';
 
 * {
     border: none;
@@ -37,14 +37,14 @@ tooltip label {
 
 #workspaces {
     background: rgba(18, 20, 26, 0.55);
-    padding: 1px 2px;
+    padding: 1px 1px;
     margin: 0 0 0 6px;
     border-radius: 14px;
     color: @fg;
 }
 
 #workspaces button {
-    padding: 0px 2px;
+    padding: 0px 2px 1px 4px;
     margin: 0 1px;
     border-radius: 999px;
     min-width: 18px;
@@ -99,6 +99,7 @@ tooltip label {
     padding: 1px 6px;
     margin: 0 0 0 4px;
     border-radius: 14px;
+    min-height: 16px;
 }
 
 #clock {
@@ -145,10 +146,31 @@ tooltip label {
     color: #7fdc92;
 }
 
+#battery.charging {
+    animation: battery-charge-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes battery-charge-pulse {
+    0% {
+        color: #7fdc92;
+        text-shadow: 0 0 0 rgba(127, 220, 146, 0.0);
+    }
+
+    50% {
+        color: #b7f3a8;
+        text-shadow: 0 0 8px rgba(127, 220, 146, 0.6);
+    }
+
+    100% {
+        color: #7fdc92;
+        text-shadow: 0 0 0 rgba(127, 220, 146, 0.0);
+    }
+}
+
 #battery,
 #custom-notification {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 6px;
+    padding-right: 10px;
 }
 
 #cpu {
@@ -170,4 +192,10 @@ tooltip label {
 
 #tray {
     padding: 1px 6px;
+    color: #89b4fa;
+}
+
+#tray menu {
+    background: #1e1e2e;
+    color: #cdd6f4;
 }

@@ -1,6 +1,6 @@
 {
     "position": "top",
-    "height": 38,
+    "height": 28,
     "margin-bottom": 0,
     "modules-left": [
         "hyprland/workspaces",
@@ -13,13 +13,12 @@
     ],
     "modules-right": [
         "tray",
-        "mpris",
+        "network#wifi",
+        "network#ethernet",
+        "bluetooth",
         "pulseaudio",
         "backlight",
         "power-profiles-daemon",
-        "bluetooth",
-        "network#ethernet",
-        "network#wifi",
         "battery",
         "custom/notification"
     ],
@@ -111,7 +110,7 @@
         "format-disconnected": "󰈂",
         "tooltip-format-ethernet": "{ifname} {ipaddr}/{cidr}",
         "tooltip-format-disconnected": "Disconnected",
-        "on-click": "iwgtk"
+        "on-click": "env GTK_THEME=Adwaita:dark iwgtk"
     },
     "network#wifi": {
         "interface": "wlan0",
@@ -120,7 +119,7 @@
         "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
         "tooltip-format-disconnected": "Disconnected",
         "max-length": 30,
-        "on-click": "iwgtk"
+        "on-click": "env GTK_THEME=Adwaita:dark iwgtk"
     },
     "battery": {
         "bat": "BAT0",
