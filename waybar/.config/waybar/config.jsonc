@@ -18,7 +18,6 @@
         "bluetooth",
         "pulseaudio",
         "backlight",
-        "power-profiles-daemon",
         "battery",
         "custom/notification"
     ],
