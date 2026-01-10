@@ -56,25 +56,25 @@ button span {
 
 /* Icons */
 #lock {
-    background-image: image(url("./icons/lock-hover.png"));
+    background-image: image(url("./icons/lock_white.png"));
 }
 
 #logout {
-    background-image: image(url("./icons/logout-hover.png"));
+    background-image: image(url("./icons/logout_white.png"));
 }
 
 #suspend {
-    background-image: image(url("./icons/sleep2.png"));
+    background-image: image(url("./icons/suspend_white.png"));
 }
 
 #shutdown {
-    background-image: image(url("./icons/power-hover.png"));
+    background-image: image(url("./icons/shutdown_white.png"));
 }
 
 #reboot {
-    background-image: image(url("./icons/restart-hover.png"));
+    background-image: image(url("./icons/reboot_white.png"));
 }
 
 #hibernate {
-    background-image: image(url("./icons/hibernate-hover.png"));
+    background-image: image(url("./icons/hibernate_white.png"));
 }
