@@ -1,52 +1,60 @@
-/* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
-/* wallust-wlogout */
+/* Core colors (from our scheme) */
+@define-color foreground #e6edf3;
+/* glacier foreground */
+@define-color accent #1793d1;
+/* Arch blue */
+@define-color accent_alt #b18cff;
+/* aurora purple */
+@define-color bg_glass rgba(12, 18, 28, 0.78);
 
-@define-color foreground #abb2bf;
-@define-color color13 #c678dd;
-
+/* Window */
 window {
     font-size: 24pt;
     color: @foreground;
-    /* text */
-    background-color: rgba(30, 30, 46, 0.8);
+    background-color: @bg_glass;
 }
 
+/* Buttons */
 button {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20%;
-    background-color: rgba(200, 220, 255, 0);
+    background-color: rgba(30, 45, 70, 0.0);
+
     animation: gradient_f 10s ease-in infinite;
-    transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    transition:
+        all 0.3s cubic-bezier(.55, 0.0, .28, 1.682),
+        box-shadow 0.2s ease-in-out,
+        background-color 0.2s ease-in-out;
+
     border-radius: 80px;
     border: 0px;
     outline-style: none;
 }
 
+/* Focus */
 button:focus {
     background-size: 35%;
     border: 0px;
     outline-style: none;
-
 }
 
+/* Hover — Arch blue highlight */
 button:hover {
     background-color: transparent;
-    color: @color13;
+    color: @accent;
     background-size: 35%;
     margin: 15px;
     border-radius: 80px;
     outline-style: none;
-
 }
 
-/* Adjust the size of the icon or content inside the button */
+/* Text / icon inside button */
 button span {
     font-size: 1.2em;
-    /* Increase the font size */
 }
 
-
+/* Icons */
 #lock {
     background-image: image(url("./icons/lock-hover.png"));
 }

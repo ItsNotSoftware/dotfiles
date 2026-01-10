@@ -1,0 +1,29 @@
+/* Arch Glacier Palette – Wallpaper matched */
+
+@define-color bg-main rgba(14, 18, 28, 0.65);
+@define-color bg-glass rgba(30, 45, 70, 0.35);
+@define-color bg-glass-strong rgba(30, 45, 70, 0.55);
+
+@define-color border-glass rgba(150, 190, 255, 0.25);
+@define-color border-glow rgba(120, 170, 255, 0.45);
+
+/* Text */
+@define-color fg-main #e6edf3;
+@define-color fg-soft #cfe7ff;
+@define-color fg-muted #9bb4d1;
+
+/* Accents */
+@define-color blue-glacier #7fdcfa;
+@define-color blue-deep #61afef;
+@define-color purple-aurora #b18cff;
+@define-color green-aurora #7fdc92;
+@define-color sunrise-peach #f3c89b;
+@define-color sunrise-pink #f2a7c6;
+
+/* Status colors */
+@define-color cpu #ffb066;
+@define-color mem #b9a8ff;
+@define-color temp #ff866d;
+@define-color volume #f2c27b;
+@define-color wifi #7fe4ff;
+@define-color battery #7fdc92;

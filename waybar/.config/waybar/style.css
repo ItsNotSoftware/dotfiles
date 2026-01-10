@@ -1,4 +1,4 @@
-@import 'colors/one-dark.css';
+@import "colors/arch-glacier.css";
 
 * {
     border: none;
@@ -16,9 +16,10 @@
 }
 
 label {
-    color: #e6edf3;
+    color: @fg-main;
 }
 
+/* BAR */
 window#waybar {
     background: transparent;
     border: none;
@@ -26,60 +27,78 @@ window#waybar {
     padding: 2px 6px;
 }
 
+/* TOOLTIP */
 tooltip label {
-    color: #e6edf3;
+    color: @fg-main;
     padding: 8px 10px;
     background: rgba(14, 18, 26, 0.85);
-    border: 1px solid rgba(120, 140, 170, 0.45);
+    border: 1px solid rgba(120, 160, 220, 0.45);
     border-radius: 10px;
 }
 
+/* WORKSPACES */
 #workspaces {
-    background: rgba(18, 20, 26, 0.55);
+    background: rgba(20, 30, 45, 0.45);
     padding: 1px 1px;
     margin: 0 0 0 6px;
     border-radius: 14px;
-    color: @fg;
+    color: @fg-soft;
 }
 
 #workspaces button {
     padding: 0px 2px 1px 4px;
-    margin: 0 1px;
-    border-radius: 999px;
+    margin: 0 4px;
+    border-radius: 0;
     min-width: 18px;
     min-height: 16px;
-    color: #dbe7ff;
-    background-color: rgba(34, 38, 48, 0.7);
+
+    color: @fg-soft;
+    background: transparent;
     transition: none;
 }
 
+/* ACTIVE */
 #workspaces button.active {
-    background: linear-gradient(135deg, @blue, @purple);
+    background: linear-gradient(135deg,
+            #1793d1,
+            #0f6fa8);
     color: #0b0f14;
+
     min-width: 18px;
     min-height: 16px;
-    box-shadow: inset 0 0 0 1px rgba(5, 8, 12, 0.8);
-    transition: none;
+    border-radius: 999px;
+
+    box-shadow: none;
     font-size: 12px;
 }
 
+/* HOVER */
 #workspaces button:hover {
-    background: linear-gradient(135deg, @purple, @blue);
-    color: @bg0;
-    min-width: 18px;
-    min-height: 16px;
+    background: linear-gradient(135deg, @purple-aurora, @blue-glacier);
+    color: #0b0f14;
     background-size: 100% 100%;
 }
 
+#workspaces button:hover:not(.active) {
+    border-radius: 999px;
+    /* fixes square hover */
+    background: rgba(140, 180, 255, 0.18);
+    color: @fg-main;
+}
+
+
+
+/* URGENT */
 #workspaces button.urgent {
-    background: linear-gradient(135deg, @red, @orange);
-    color: @bg0;
+    background: linear-gradient(135deg, #ff6b6b, #ffb86c);
+    color: #0b0f14;
     min-width: 18px;
     min-height: 16px;
     background-size: 100% 100%;
     transition: none;
 }
 
+/* PILLS — SAME DIMENSIONS */
 #temperature,
 #memory,
 #cpu,
@@ -94,64 +113,80 @@ tooltip label {
 #battery,
 #tray,
 #custom-notification {
-    background: rgba(20, 24, 32, 0.6);
+    background: rgba(20, 30, 45, 0.45);
     padding: 1px 6px;
     margin: 0 0 0 4px;
     border-radius: 14px;
     min-height: 16px;
 }
 
+/* MODULE COLORS (GLACIER) */
 #clock {
-    color: #cfd6df;
+    color: @fg-main;
+    font-size: 13px;
+    letter-spacing: 0.5px;
 }
 
 #mpris {
-    color: #9fe2b2;
-}
-
-#custom-notification {
-    color: #ffffff;
+    color: @green-aurora;
 }
 
 #pulseaudio {
-    color: #f2c27b;
+    color: @volume;
 }
 
 #backlight {
-    color: #f7e08b;
+    color: @sunrise-peach;
 }
 
 #power-profiles-daemon {
-    color: #a7e3ff;
+    color: @blue-glacier;
 }
 
 #hyprland-language {
-    color: #b9a8ff;
+    color: @purple-aurora;
 }
 
 #bluetooth {
-    color: #7bb9ff;
+    color: @blue-deep;
 }
 
 #network.wifi {
-    color: #7fe4ff;
+    color: @wifi;
 }
 
 #network.ethernet {
-    color: #7fdc92;
+    color: @green-aurora;
+}
+
+#cpu {
+    color: @cpu;
+}
+
+#memory {
+    color: @mem;
+}
+
+#temperature {
+    color: @temp;
 }
 
 #battery {
-    color: #7fdc92;
+    color: @battery;
 }
 
+#custom-notification {
+    color: @fg-main;
+}
+
+/* BATTERY ANIMATION */
 #battery.charging {
     animation: battery-charge-pulse 1.2s ease-in-out infinite;
 }
 
 @keyframes battery-charge-pulse {
     0% {
-        color: #7fdc92;
+        color: @battery;
         text-shadow: 0 0 0 rgba(127, 220, 146, 0.0);
     }
 
@@ -161,40 +196,25 @@ tooltip label {
     }
 
     100% {
-        color: #7fdc92;
+        color: @battery;
         text-shadow: 0 0 0 rgba(127, 220, 146, 0.0);
     }
 }
 
+/* EXTRA PADDING YOU HAD */
 #battery,
 #custom-notification {
     padding-left: 6px;
     padding-right: 10px;
 }
 
-#cpu {
-    color: #ffb066;
-}
-
-#memory {
-    color: #b9a8ff;
-}
-
-#temperature {
-    color: #ff866d;
-}
-
-#clock {
-    font-size: 13px;
-    letter-spacing: 0.5px;
-}
-
+/* TRAY */
 #tray {
     padding: 1px 6px;
-    color: #89b4fa;
+    color: @blue-glacier;
 }
 
 #tray menu {
-    background: #1e1e2e;
-    color: #cdd6f4;
+    background: rgba(18, 24, 36, 0.95);
+    color: @fg-main;
 }
