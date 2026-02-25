@@ -1,0 +1,174 @@
+/* Rofi utility theme for clipboard + calc (matches Waybar Arch Glacier palette) */
+
+* {
+    bg-main:          rgba (14, 18, 28, 88%);
+    bg-glass:         rgba (30, 45, 70, 45%);
+    bg-glass-strong:  rgba (30, 45, 70, 65%);
+    border-glass:     rgba (150, 190, 255, 28%);
+    border-glow:      rgba (120, 170, 255, 55%);
+    fg-main:          #e6edf3;
+    fg-soft:          #cfe7ff;
+    fg-muted:         #9bb4d1;
+    accent:           #7fdcfa;
+    accent-2:         #61afef;
+    urgent:           #ff866d;
+
+    background:       @bg-main;
+    foreground:       @fg-main;
+    border-color:     @border-glow;
+    separatorcolor:   transparent;
+    selected-normal-background: @bg-glass-strong;
+    selected-normal-foreground: @fg-main;
+    normal-background: transparent;
+    normal-foreground: @fg-soft;
+    alternate-normal-background: transparent;
+    alternate-normal-foreground: @fg-soft;
+    active-background: transparent;
+    active-foreground: @accent;
+    urgent-background: transparent;
+    urgent-foreground: @urgent;
+}
+
+configuration {
+    font: "CaskaydiaCove Nerd Font 13";
+    show-icons: false;
+    display-drun: "Apps";
+    display-run: "Run";
+    hover-select: true;
+}
+
+window {
+    transparency: "real";
+    location: center;
+    anchor: center;
+    fullscreen: false;
+    width: 720px;
+    border: 1px;
+    border-radius: 14px;
+    border-color: @border-glow;
+    background-color: @bg-main;
+    padding: 8px;
+    y-offset: -30px;
+}
+
+mainbox {
+    spacing: 6px;
+    children: [ "inputbar", "message", "listview" ];
+    background-color: transparent;
+}
+
+overlay {
+    background-color: rgba (6, 10, 18, 22%);
+}
+
+inputbar {
+    spacing: 10px;
+    padding: 10px 12px;
+    border: 1px;
+    border-radius: 12px;
+    border-color: @border-glass;
+    background-color: @bg-glass;
+    text-color: @fg-main;
+    children: [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled: true;
+    padding: 0px 4px 0px 1px;
+    text-color: @accent;
+    background-color: transparent;
+}
+
+entry {
+    expand: true;
+    placeholder: "Type to search";
+    placeholder-color: @fg-muted;
+    text-color: @fg-main;
+    background-color: transparent;
+    cursor: text;
+}
+
+listview {
+    lines: 11;
+    columns: 1;
+    dynamic: true;
+    cycle: true;
+    scrollbar: false;
+    spacing: 4px;
+    padding: 2px;
+    border: 0px;
+    background-color: transparent;
+}
+
+scrollbar {
+    handle-width: 4px;
+    handle-color: @accent-2;
+    background-color: @bg-glass;
+    border-radius: 999px;
+}
+
+element {
+    padding: 9px 10px;
+    border: 1px;
+    border-radius: 12px;
+    border-color: transparent;
+    background-color: transparent;
+    text-color: @fg-soft;
+    spacing: 8px;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color: @fg-soft;
+}
+
+element selected.normal {
+    background-color: @bg-glass-strong;
+    border-color: @border-glow;
+    text-color: @fg-main;
+}
+
+element selected.active {
+    background-color: @bg-glass-strong;
+    border-color: @accent;
+    text-color: @fg-main;
+}
+
+element alternate.normal {
+    background-color: rgba (30, 45, 70, 18%);
+    text-color: @fg-soft;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    highlight: @accent;
+    vertical-align: 0.5;
+    markup: true;
+}
+
+element-icon {
+    background-color: transparent;
+    size: 1.1em;
+}
+
+message,
+textbox,
+error-message {
+    border-radius: 12px;
+    border-color: @border-glass;
+    background-color: @bg-glass;
+    text-color: @fg-main;
+    padding: 6px 8px;
+}
+
+message {
+    border: 1px;
+    border-color: rgba (120, 170, 255, 22%);
+    background-color: rgba (30, 45, 70, 24%);
+}
+
+textbox {
+    text-color: @accent;
+    font: "CaskaydiaCove Nerd Font Bold 12";
+}
