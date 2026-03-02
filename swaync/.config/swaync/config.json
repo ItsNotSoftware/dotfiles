@@ -85,6 +85,12 @@
         {
           "label": "󰏘",
           "command": "nwg-look"
+        },
+        {
+          "label": "󰛊",
+          "type": "toggle",
+          "command": "sh -c '[[ \"$SWAYNC_TOGGLE_STATE\" == true ]] && ~/.config/hypr/scripts/toggle-idle.sh off || ~/.config/hypr/scripts/toggle-idle.sh on'",
+          "update-command": "~/.config/hypr/scripts/toggle-idle.sh status"
         }
       ]
     }
